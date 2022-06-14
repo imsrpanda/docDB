@@ -1,9 +1,9 @@
 {
-"posts": [
+"channels": [
 {
-"id": 1,
-"title": "Post 1",
-"description": "this is description 1"
+"id": 'sftp_host',
+"title": "sftp host",
+"description": "this is description about sftp"
 },
 {
 "id": 2,
