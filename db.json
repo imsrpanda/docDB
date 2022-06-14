@@ -1,7 +1,7 @@
 {
 "channels": [
 {
-"id": 'sftp_host',
+"id": "sftp_host",
 "title": "sftp host",
 "description": "this is description about sftp"
 },
