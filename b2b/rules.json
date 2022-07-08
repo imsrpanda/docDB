@@ -1,0 +1,29 @@
+{
+"processing_rule": [
+{
+"id": "processing_rule_Sender_criteria",
+"key": "Sender criteria",
+"value": "Criteria extracts the values of the sender attribute (the sender of the document) to determine the sending partner. Then webMethods.io B2B matches the sender partner from the document with the sender you specify in the processing rule. For example, if you specify the sender criteria in a processing rule, webMethods.io B2B uses the value extracted for the sender attribute to find the profile for the sending partner. Then, webMethods.io B2B matches that partner with the sender criteria in the processing rule. The possible values are:\nAny. Matches with any known or unknown sender.\nEnterprise. Matches only if the enterprise is the sender.\nUnknown. Matches only with unknown senders.\nSelected. Matches with a select group of senders."
+},
+{
+"id": "processing_rule_Receiver_criteria",
+"key": "Receiver criteria",
+"value": "Criteria extracts the values of the receiver attribute (the receiver of the document) to determine the receiver partner. Then webMethods.io B2B matches the receiver partner in the document with the receiver you specify in the processing rule. For example, if you specify the receiver criteria in a processing rule, webMethods.io B2B uses the value extracted for the receiver attribute to find the profile for the receiver partner. Then, webMethods.io B2B matches the partner with the receiver criteria in the processing rule. The possible values are:\nAny. Matches with any known or unknown receiver.\nEnterprise. Matches only if the enterprise is the receiver.\nUnknown. Matches only with unknown receivers.\nSelected. Matches with a select group of receivers."
+},
+{
+"id": "processing_rule_Document",
+"key": "Document",
+"value": "Criteria matches the type of business document that is used for the document you specify in the processing rule. For example, if you have an EDI UNEDIFACT D97B document of type ORDERS, you can the define document criteria to select a processing rule if the document matches with the ORDERS purchase order. The possible values are:\nAny. Matches with any type of document.\nUnknown. Matches with unknown type of document.\nSelected. Matches with a selected business document."
+},
+{
+"id": "processing_rule_User_status",
+"key": "User status",
+"value": "Criteria matches with the value of the user status in the document to the user status criteria specified in a processing rule. For example, you might set the user status attribute to PENDING in certain circumstances, and you can then define criteria to select a processing rule if the user status attribute is PENDING. The possible values are:\nAny. Matches with any type of user status.\nUser specified status. Matches with a user-specified status.\n\nType a value and click Add value to add a user status. You can add multiple user status values in a similar way."
+},
+{
+"id": "processing_rule_Recognition_error",
+"key": "Recognition error",
+"value": "Criteria matches with the value you specify for the recognition of errors in a processing rule. For example, you might set up processing rule criteria to select the processing rule only if webMethods.io B2B did not encounter errors. The possible values are:\nMay have errors. Matches even if document may have errors.\nHas no errors. Matches when a document has no errors.\nHas errors. Matches even when a document has errors."
+}
+]
+}
