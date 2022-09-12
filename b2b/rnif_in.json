@@ -1,94 +1,92 @@
-{
-id:	"rnif_in_message_defer_to_tpa"
-key:	"Defer to TPA"
-value:	"Indicates whether to use the configurations from TPA.
-If you select this option, then the configurations are selected from TPA for sending or processing an RNIF message.
-Disabled by default. Available in RNIF versions: 1.1 and 2.0."
+{response: [{
+id:	"rnif_in_message_defer_to_tpa",
+key:	"Defer to TPA",
+value:	"Indicates whether to use the configurations from TPA.If you select this option, then the configurations are selected from TPA for sending or processing an RNIF message.,Disabled by default. Available in RNIF versions: 1.1 and 2.0."
 },
 {
-id:	"rnif_in_message_rnif_version"
-key:	"RNIF version"
+id:	"rnif_in_message_rnif_version",
+key:	"RNIF version",
 value:	"Version of RNIF to use to send the documents to partners. The available versions are 1.1 and 2.0."
 },
 {
-id:	"rnif_in_message_encoding"
-key:	"RNIF version"
+id:	"rnif_in_message_encoding",
+key:	"RNIF version",
 value:	"Encoding to use for MIME parts of synchronous response. Select from the list of signing algorithms: quoted-printable (Default), 7bit, 8bit, binary, base64, uuencode"
 },
 {
-id: "rnif_in_message_receive_signed_messages"
-key: "Receive signed messages"
+id: "rnif_in_message_receive_signed_messages",
+key: "Receive signed messages",
 value: "Indicates whether to receive signed inbound RNIF messages. If you select this option and the inbound messages are not signed, then an RNIF exception is sent to partners and the same appears for those transactions in the Course of transaction section. Enabled by default. Available in RNIF version: 2.0."
 },
 {
-id: "rnif_in_message_synchronous_response_hash_algorithm"
-key: "Synchronous response hash algorithm"
+id: "rnif_in_message_synchronous_response_hash_algorithm",
+key: "Synchronous response hash algorithm",
 value: "The algorithm used to generate the RosettaNet Message Digest for synchronous response. Select from the list of algorithms: SHA-1, SHA-256 (Default), SHA-384, SHA-512. Available in RNIF version: 2.0."
 },
 {
-id: "rnif_in_message_receive_encrypted_messages"
-key: "Receive encrypted messages"
+id: "rnif_in_message_receive_encrypted_messages",
+key: "Receive encrypted messages",
 value: "Indicates whether to receive encrypted inbound RNIF messages. If you select this option and the inbound messages are not encrypted, then an RNIF exception is sent to partners and the same appears for those transactions in the Course of transaction section. Enabled by default. Available in RNIF version: 2.0."
 },
 {
-id: "rnif_in_message_receive_encrypted_message_header"
-key: "Receive encrypted message header"
-value: "Indicates whether to receive inbound RNIF message headers with encrypted header. If you select this option and the inbound messages are not encrypted, then an RNIF exception is sent to partners and the same appears for those transactions in the Course of transaction section.
-Disabled by default. Important: To ensure that you receive an encrypted message and message header, enable Receive encrypted messages and Receive encrypted message header. Available in RNIF version: 2.0."
+id: "rnif_in_message_receive_encrypted_message_header",
+key: "Receive encrypted message header",
+value: "Indicates whether to receive inbound RNIF message headers with encrypted header. If you select this option and the inbound messages are not encrypted, then an RNIF exception is sent to partners and the same appears for those transactions in the Course of transaction section.Disabled by default. Important: To ensure that you receive an encrypted message and message header, enable Receive encrypted messages and Receive encrypted message header. Available in RNIF version: 2.0."
 },
 {
-id:"rnif_in_message_synchronous_response_encryption_algorithm"
-key:"Synchronous response encryption algorithm"
+id:"rnif_in_message_synchronous_response_encryption_algorithm",
+key:"Synchronous response encryption algorithm",
 value: "The encryption algorithm to use to encrypt the documents for synchronous response. Select from the list of supported encryption algorithms: TripleDES (Default), RC2, DES. Available in RNIF version: 2.0."
 },
 {
-id:"rnif_in_message_rc2_encryption_key_length"
-key:"RC2 encryption key length"
+id:"rnif_in_message_rc2_encryption_key_length",
+key:"RC2 encryption key length",
 value: "Length (in bits) of the RC2 encryption key. Valid values are 128, 64, and 40. Default is 128. Available in RNIF version: 2.0."
 },
 {
-id: "rnif_in_message_send_receipt_acknowledgement"
-key: "Send receipt acknowledgement"
+id: "rnif_in_message_send_receipt_acknowledgement",
+key: "Send receipt acknowledgement",
 value: "Indicates whether to send an acknowledgment to partners upon receiving a document. Based on whether the incoming request header enforces a synchronous or asynchronous acknowledgment, webMethods.io B2B sends the acknowledgment accordingly (synchronously or asynchronously). Disabled by default. Available in RNIF versions: 1.1 and 2.0."
 },
 {
-id: "rnif_in_message_usage_code"
-key: "Usage code"
+id: "rnif_in_message_usage_code",
+key: "Usage code",
 value: "The RosettaNet message exchange environment. You can choose to have the RNIF message exchange in test or production mode. Valid values are Test or Production. Available in RNIF versions: 1.1 and 2.0."
 },
 {
-id: "rnif_in_pipinfo_defer_to_tpa"
-key: "Defer to TPA"
-value: " Indicates whether to use the configurations from TPA. If you select this option, then the configurations are selected from TPA for sending or processing an RNIF message.
-Disabled by default. Available in RNIF versions: 1.1 and 2.0."
+id: "rnif_in_pipinfo_defer_to_tpa",
+key: "Defer to TPA",
+value: " Indicates whether to use the configurations from TPA. If you select this option, then the configurations are selected from TPA for sending or processing an RNIF message.Disabled by default. Available in RNIF versions: 1.1 and 2.0."
 },
 {
-id: "rnif_in_pipinfo_sender_focal_role"
-key: "Sender focal role"
+id: "rnif_in_pipinfo_sender_focal_role",
+key: "Sender focal role",
 value: " The value used to validate the GlobalPartnerRoleClassificationCode tag describing fromRole in the service header. For valid values, see the fromService and fromRole details in the PIP specification corresponding to the executing PIP, activity, or action. Available in RNIF versions: 1.1 and 2.0."
 },
 {
-id: "rnif_in_pipinfo_receiver_focal_role"
-key: "Receiver focal role"
+id: "rnif_in_pipinfo_receiver_focal_role",
+key: "Receiver focal role",
 value: "The value used to validate the GlobalPartnerRoleClassificationCode tag describing toRole in the service header. For valid values, see the toService and toRole details in the PIP specification corresponding to the executing PIP, activity, or action. Available in RNIF versions: 1.1 and 2.0."
 },
 {
-id: "rnif_in_pipinfo_process_code"
-key: "Process code"
+id: "rnif_in_pipinfo_process_code",
+key: "Process code",
 value: "Code or name of the PIP, such as 3A4 (Request Purchase Order). Available in RNIF versions: 1.1 and 2.0."
 },
 {
-id: "rnif_in_pipinfo_process_version"
-key: "Process code"
+id: "rnif_in_pipinfo_process_version",
+key: "Process code",
 value: "Version of the PIP process, such as 1.1 or 1.4. Available in RNIF versions: 1.1 and 2.0."
 },
 {
-id: "rnif_in_pipinfo_transaction_code"
-key: "Transaction code"
+id: "rnif_in_pipinfo_transaction_code",
+key: "Transaction code",
 value: "Transaction associated with each RosettaNet PIP document. For example, Create Purchase Order. Note: webMethods.io B2B does not validate the value of Transaction code against the incoming message. webMethods.io B2B uses this value to construct the response message. Available in RNIF versions: 1.1 and 2.0."	
 },
 {
-id: "rnif_in_pipinfo_response_action_code"
-key: "Response action code"
+id: "rnif_in_pipinfo_response_action_code",
+key: "Response action code",
 value: "Response action associated with each RosettaNet PIP document. For example, Purchase Order Confirmation Action. Important: This is required only when the response has to be one way and synchronous. Available in RNIF versions: 1.1 and 2.0."
+}
+]
 }
