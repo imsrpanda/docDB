@@ -1,0 +1,794 @@
+{
+    "data": [
+        [
+            "Options",
+            "Description",
+            ""
+        ],
+        [
+            "**Accept signed or signed-encrypted messages**",
+            "Select to receive inbound AS2 messages that are either signed or signed and encrypted. <br>If you select this option and the inbound messages are not signed or signed and encrypted, then an `Insufficient message security` error appears for those transactions in the **Course of transaction** section. This error also appears in the MDN if the sender requests one. <br>  Disabled by default",
+            ""
+        ],
+        [
+            "**Accept encrypted or signed-encrypted messages**",
+            "Select to receive inbound AS2 messages that are encrypted or signed and encrypted. <br>If you select this option and the inbound messages are not encrypted or signed and encrypted, then an `Insufficient message security` error appears for those transactions in the **Course of transaction** section. This error also appears in the MDN if the sender requests one. <br>  Disabled by default <br>  **Note:** If both **Accept signed or signed-encrypted messages** and **Accept encrypted or signed-encrypted messages** are enabled, the channel receives inbound messages that are both signed and encrypted.",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Field",
+            "Description",
+            ""
+        ],
+        [
+            "-----",
+            "-----------",
+            ""
+        ],
+        [
+            "**Key**",
+            "Specify a valid key to identify the Flat File document type. For example, a filename",
+            ""
+        ],
+        [
+            "**Value**",
+            "Specify the corresponding value for the **Key** that was defined. For example, sample.txt.",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Options",
+            "Description",
+            ""
+        ],
+        [
+            "-------",
+            "-----------",
+            ""
+        ],
+        [
+            "**Connection Settings**",
+            "",
+            ""
+        ],
+        [
+            "**Endpoint**",
+            "Endpoint URL used to send AS2 messages to partners. You can either use an HTTP or HTTPS URL depending on your need.<br> If you use HTTPS, ensure that the corresponding SSL certificate is configured in the sender's profile.<br>The URL must have the protocol, hostname, port \\(optional\\) and the complete path. <br>For example, `http://trader.com` or `https://trader.com`",
+            ""
+        ],
+        [
+            "**Username**",
+            "Username used to connect to the partner's endpoint.",
+            ""
+        ],
+        [
+            "**Password**",
+            "Password used to connect to the partner's endpoint.",
+            ""
+        ],
+        [
+            "**Message Settings**",
+            "",
+            ""
+        ],
+        [
+            "**Enable message signing**",
+            "Enable to sign outbound documents with the sender's private key. <br>If you enable signing, ensure that the sender has a corresponding certificate for the sign-verify usage. Disabled by default.",
+            ""
+        ],
+        [
+            "**Signing algorithm**",
+            "The signing algorithm to use to sign the documents. <br>Select from the list of signing algorithms:<ul><li>MD5</li><li>SHA-1</li><li>SHA-256</li><li>SHA-384</li><li>SHA-512</li>\\(Default\\)",
+            ""
+        ],
+        [
+            "**Enable message encryption**",
+            "Enable to encrypt outbound documents using receiver's public key. <br>If you enable encryption, ensure that the receiver has a corresponding certificate for the encrypt-decrypt usage. Disabled by default.",
+            ""
+        ],
+        [
+            "**Encryption algorithm**",
+            "The encryption algorithm to use to encrypt the documents. <br>Select from the list of supported encryption algorithms:<ul><li>TripleDES \\(Default\\)</li><li>RC2 40 \\(40 bits\\)</li><li>RC2 64 \\(64 bits\\)</li><li>RC2 128 \\(128 bits\\)</li><li>DES</li><li>AES 128</li><li>AES 192</li><li>AES 256</li></ul>",
+            ""
+        ],
+        [
+            "**Enable Message Compression**",
+            "Enable to compress the outbound message. Disabled by default.",
+            ""
+        ],
+        [
+            "**Acknowledgment Settings**",
+            "",
+            ""
+        ],
+        [
+            "**Request MDN**",
+            "Enable to request the receiver to return an MDN. Enabled by default.",
+            ""
+        ],
+        [
+            "**Request Signed MDN**",
+            "Enable to request the receiver to send a signed MDN. Disabled by default.",
+            ""
+        ],
+        [
+            "**Request Asynchronous MDN**",
+            "Enable to request an asynchronous MDN. Disabled by default. If you disable the option, it means that you are requesting synchronous MDNs.",
+            ""
+        ],
+        [
+            "**Asynchronous MDN URL**",
+            "Remote or native endpoint that accepts the asynchronous inbound MDNs.<br> You can use both HTTP and HTTPS URL to receive asynchronous MDNs.<br> To receive secured asynchronous MDNs, use an HTTPS URL.<br>If you turn on the **Request Asynchronous MDN** option, and do not specify an **Asynchronous MDN URL**, webMethods.io B2B switches to sending synchronous MDNs.<br>For example, `http://tenant-id.com/b2b/routes/channel/id` <br>For example, `http://tenant-id.com/b2b/routes/channel/id`<br>  For example, `https://<username\\>:<password\\>@tenant-id.com/b2b/routes/channel/id`",
+            ""
+        ],
+        [
+            "**Other Settings**",
+            "",
+            ""
+        ],
+        [
+            "**AS2 Version**",
+            "Version of AS2 protocol that is being used to send documents to partners. The available versions are:<ul><li>1.1</li><li>1.2 \\(default\\)</li></ul>",
+            ""
+        ],
+        [
+            "**Document delivery rate**",
+            "",
+            ""
+        ],
+        [
+            "**Enable**",
+            "Allows you to limit the rate at which documents must be delivered to the endpoint. You must persist the document in the database so this option can be used to deliver documents in a regulated manner.",
+            ""
+        ],
+        [
+            "**Maximum number of requests per minute**",
+            "Specify the maximum number of business documents that can be delivered to the outbound channel endpoint. You can tune this rate based on the performance of the partner systems that receive the business documents on this endpoint. The default value is 1 \\(minimum\\). The maximum value is 1000.",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Options",
+            "Description",
+            ""
+        ],
+        [
+            "-------",
+            "-----------",
+            ""
+        ],
+        [
+            "**Connection Settings**",
+            "",
+            ""
+        ],
+        [
+            "**Defer to TPA**",
+            "Indicates whether to use the configurations from TPA.<br>If you select this option, then the configurations are selected from AS4-OUT channel. Enabled by default.",
+            ""
+        ],
+        [
+            "**Endpoint**",
+            "Endpoint URL used to send AS4 messages to partners. You can either use an HTTP or HTTPS URL depending on your need.<br> If you use HTTPS, ensure that the corresponding SSL certificate is configured in the sender's profile.<br>The URL must have the protocol, hostname, port \\(optional\\) and the complete path. <br>For example, `http://trader.com` or `https://trader.com`",
+            ""
+        ],
+        [
+            "**Username**",
+            "Username used to connect to the partner's endpoint.",
+            ""
+        ],
+        [
+            "**Password**",
+            "Password used to connect to the partner's endpoint.",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Field",
+            "Description",
+            ""
+        ],
+        [
+            "-----",
+            "-----------",
+            ""
+        ],
+        [
+            "**Key**",
+            "Specify a valid key to identify the Flat File document type. For example, a filename",
+            ""
+        ],
+        [
+            "**Value**",
+            "Specify the corresponding value for the **Key** that was defined. For example, sample.txt.",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Options",
+            "Description",
+            ""
+        ],
+        [
+            ":---",
+            ":---",
+            ""
+        ],
+        [
+            "**Host**",
+            "Host name or IP address of the partner's HTTP server on which the documents are sent. For example, trader.com",
+            ""
+        ],
+        [
+            "**Port**",
+            "An active HTTP port defined on the partner's HTTP server.",
+            ""
+        ],
+        [
+            "**Location**",
+            "A location on the partner's HTTP server to where the business documents are sent. For example, inbound\\\\invoice - on the HTTP server, this location is a path to where documents are sent by webMethods.io B2B.",
+            ""
+        ],
+        [
+            "**Username**",
+            "Username used to connect to the partner's HTTP server.",
+            ""
+        ],
+        [
+            "**Password**",
+            "The password used to authenticate the user on the partner's HTTP server.",
+            ""
+        ],
+        [
+            "**Use SSL**",
+            "Enable to use a secured connection for exchanging documents with your partner's HTTPS server.",
+            ""
+        ],
+        [
+            "**Keep-alive timeout value**",
+            "Time period \\(in milliseconds\\) for which you want the server to keep an idle connection open in the client connection pool before closing it. Value must be higher than zero seconds. <br>The default value is 30000 milliseconds.</ul>",
+            ""
+        ],
+        [
+            "**Connect timeout value**",
+            "Time \\(in milliseconds\\) period for which the server waits to connect to the remote server before timing out and therefore terminating the request. <br> The default is 30000 milliseconds.",
+            ""
+        ],
+        [
+            "**Document delivery rate**",
+            "",
+            ""
+        ],
+        [
+            "**Enable**",
+            "Allows you to limit the rate at which documents must be delivered to the endpoint. You must persist the document in the database so this option can be used to deliver documents in a regulated manner.",
+            ""
+        ],
+        [
+            "**Maximum number of requests per minute**",
+            "Specify the maximum number of business documents that can be delivered to the outbound channel endpoint. You can tune this rate based on the performance of the partner systems that receive the business documents on this endpoint. The default value is 1 \\(minimum\\). The maximum value is 1000.",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Field",
+            "Description",
+            "Fields available for each version"
+        ],
+        [
+            "-----",
+            "-----------",
+            "---"
+        ],
+        [
+            "**Message**",
+            "",
+            ""
+        ],
+        [
+            "**Defer to TPA**",
+            "Indicates whether to use the configurations from TPA.<br>If you select this option, then the configurations are selected from TPA for sending or processing an RNIF message.<br>Disabled by default.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**RNIF version**",
+            "Version of RNIF to use to send the documents to partners. The available versions are 1.1 and 2.0.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Encoding**",
+            "Encoding to use for MIME parts of synchronous response.<br>Select from the list of signing algorithms:<ul><li>quoted-printable \\(Default\\)</li><li>7bit</li><li>8bit</li><li>binary</li><li>base64</li><li>uuencode</li></ul>",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Receive signed messages**",
+            "Indicates whether to receive signed inbound RNIF messages. If you select this option and the inbound messages are not signed, then an RNIF exception is sent to partners and the same appears for those transactions in the **Course of transaction** section. Enabled by default.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Synchronous response hash algorithm**",
+            "The algorithm used to generate the RosettaNet Message Digest for synchronous response.<br>Select from the list of algorithms: <ul><li>SHA-1</li><li>SHA-256 \\(Default\\)</li><li>SHA-384</li><li>SHA-512</li></ul>",
+            "2.0"
+        ],
+        [
+            "**Receive encrypted messages**",
+            "Indicates whether to receive encrypted inbound RNIF messages. If you select this option and the inbound messages are not encrypted, then an RNIF exception is sent to partners and the same appears for those transactions in the **Course of transaction** section. Enabled by default.",
+            "2.0"
+        ],
+        [
+            "**Receive encrypted message header**",
+            "Indicates whether to receive inbound RNIF message headers with encrypted header. If you select this option and the inbound messages are not encrypted, then an RNIF exception is sent to partners and the same appears for those transactions in the **Course of transaction** section.<br> Disabled by default. <br> **Important:** To ensure that you receive an encrypted message and message header, enable **Receive encrypted messages** and **Receive encrypted message header**.",
+            "2.0"
+        ],
+        [
+            "**Synchronous response encryption algorithm**",
+            "The encryption algorithm to use to encrypt the documents for synchronous response. Select from the list of supported encryption algorithms:<ul><li>TripleDES \\(Default\\)</li><li>RC2</li><li>DES</li></ul>",
+            "2.0"
+        ],
+        [
+            "**RC2 encryption key length**",
+            "Length \\(in bits\\) of the RC2 encryption key. Valid values are 128, 64, and 40. Default is 128.",
+            "2.0"
+        ],
+        [
+            "**Send receipt acknowledgement**",
+            "Indicates whether to send an acknowledgment to partners upon receiving a document. Based on whether the incoming request header enforces a synchronous or asynchronous acknowledgment, webMethods.io B2B sends the acknowledgment accordingly \\(synchronously or asynchronously\\). Disabled by default.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Usage code**",
+            "The RosettaNet message exchange environment. You can choose to have the RNIF message exchange in test or production mode. Valid values are Test or Production.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**PIP information**",
+            "",
+            ""
+        ],
+        [
+            "**Defer to TPA**",
+            "Indicates whether to use the configurations from TPA.<br>If you select this option, then the configurations are selected from TPA for sending or processing an RNIF message.<br>Disabled by default.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Sender focal role**",
+            "The value used to validate the GlobalPartnerRoleClassificationCode tag describing fromRole in the service header. For valid values, see the fromService and fromRole details in the PIP specification corresponding to the executing PIP, activity, or action.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Receiver focal role**",
+            "The value used to validate the GlobalPartnerRoleClassificationCode tag describing toRole in the service header. For valid values, see the toService and toRole details in the PIP specification corresponding to the executing PIP, activity, or action.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Process code**",
+            "Code or name of the PIP, such as 3A4 \\(Request Purchase Order\\).",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Process version**",
+            "Version of the PIP process, such as 1.1 or 1.4.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Transaction code**",
+            "Transaction associated with each RosettaNet PIP document. For example, Create Purchase Order. **Note:** webMethods.io B2B does not validate the value of **Transaction code** against the incoming message. webMethods.io B2B uses this value to construct the response message.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Response action code**",
+            "Response action associated with each RosettaNet PIP document. For example, Purchase Order Confirmation Action. <br>**Important:** This is required only when the response has to be one way and synchronous.",
+            "1.1 and 2.0"
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Field",
+            "Description",
+            "Fields available for each version"
+        ],
+        [
+            "-----",
+            "-----------",
+            "---"
+        ],
+        [
+            "**Connection**",
+            "",
+            ""
+        ],
+        [
+            "**Endpoint**",
+            "Endpoint URL used to send RNIF messages to partners. You can either use an HTTP or HTTPS URL depending on your need. If you use HTTPS, ensure that the corresponding SSL certificate is configured in the sender's partner profile. The URL must have the protocol, hostname, port \\(optional\\) and the complete path. For example, `http://trader.com` or `https://trader.com`",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Username**",
+            "Username used to connect to the partner's endpoint.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Password**",
+            "Password used to connect to the partner's endpoint.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Message**",
+            "",
+            ""
+        ],
+        [
+            "**Defer to TPA**",
+            "Whether to use the configurations from TPA.<br>If you select this option, then the configurations are selected from TPA for sending or processing an RNIF message.<br>Disabled by default.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**RNIF version**",
+            "Version of RNIF to use to send the documents to partners. The available versions are 1.1 and 2.0.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Encoding**",
+            "Encoding to use for MIME parts. Select from the list of signing algorithms: <ul><li>quoted-printable \\(Default\\)</li><li>7bit</li><li>8bit</li><li>binary</li><li>base64</li><li>uuencode</li></ul>",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Enable message signing**",
+            "Whether to sign the outbound RNIF message using sender's private key. Enabled by default.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Hash algorithm**",
+            "The algorithm used to generate the RosettaNet Message Digest. <br> Select from the list of algorithms: <ul> <li>SHA-1</li><li>SHA-256 \\(Default\\)</li><li>SHA-384</li><li>SHA-512</li></ul>",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Enable message encryption**",
+            "Whether to encrypt the outbound RNIF message using receiver's public key. If you enable encryption, ensure that the receiver has a corresponding certificate for the encrypt-decrypt usage. Enabled by default.",
+            "2.0"
+        ],
+        [
+            "**Enable message header encryption**",
+            "Whether to encrypt the RNIF message header. <br>**Important:** You cannot encrypt the message header alone, without encrypting the message. To encrypt the message and message header, enable **Enable message encryption** and **Enable message header encryption**.",
+            "2.0"
+        ],
+        [
+            "**Encryption algorithm**",
+            "The encryption algorithm to use to encrypt the documents. Select from the list of supported encryption algorithms: <ul><li>TripleDES \\(Default\\)</li><li>RC2</li><li>DES</li></ul>",
+            "2.0"
+        ],
+        [
+            "**RC2 encryption key length**",
+            "Length \\(in bits\\) of the RC2 encryption key. Valid values are 128, 64, and 40. Default is 128.",
+            "2.0"
+        ],
+        [
+            "**Enable message compression**",
+            "Whether to compress of outbound messages. Disabled by default.",
+            "2.0"
+        ],
+        [
+            "**Enable synchronous response**",
+            "Whether to transmit the response or receipt acknowledgment synchronously. Disabled by default.",
+            "2.0"
+        ],
+        [
+            "**Usage code**",
+            "The RosettaNet message exchange environment. You can choose to have the RNIF message exchange in test or production mode. Valid values are Test or Production.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Document delivery rate**",
+            "",
+            ""
+        ],
+        [
+            "**Enable**",
+            "Allows you to limit the rate at which documents must be delivered to the endpoint. You must persist the document in the database, so this option can be used to deliver documents in a regulated manner.",
+            "1.1 and 2.0"
+        ],
+        [
+            "**Maximum number of requests per minute**",
+            "Specify the maximum number of business documents that can be delivered to the outbound channel endpoint. You can tune this rate based on the performance of the partner systems that receive the business documents on this endpoint. The default value is 1 \\(minimum\\). The maximum value is 1000.",
+            "1.1 and 2.0"
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Field",
+            "Description",
+            ""
+        ],
+        [
+            ":---",
+            ":-------------",
+            ""
+        ],
+        [
+            "**Connection**",
+            "",
+            ""
+        ],
+        [
+            "**Hostname**",
+            "Host name or IP address of the partner's SFTP server. For example, `trader.com`.",
+            ""
+        ],
+        [
+            "**Port**",
+            "An active port on the partner's SFTP server. For example, 3456. Default is 22.<br>If the port to which the connection is being  established  is either invalid or not open, it results in a bad gateway error.",
+            ""
+        ],
+        [
+            "**Host public key option**",
+            "Public key used to establish a secure connection with partner's SFTP server. Select from the following options:<ul><li>**Auto retrieve** - webMethods.io B2B automatically retrieves the public key file. <br>**Note:** Ensure that the hostname and port are active and accessible.</li> <li> **Upload** - You can upload the public key file.</li></ul>",
+            ""
+        ],
+        [
+            "**Username**",
+            "Username used to connect to partner's SFTP server.",
+            ""
+        ],
+        [
+            "**Authentication type**",
+            "Type of authentication required to connect to partner's SFTP server. Select from the following types of authentications: <ul><li>**Password** </li><li> **Public key** </li></ul>",
+            ""
+        ],
+        [
+            "**Password**",
+            "If you selected **Password** as the authentication type, provide the password to connect to partner's SFTP server.",
+            ""
+        ],
+        [
+            "**Private key**",
+            "If you selected **Public key** as the authentication type, upload the private key file required to connect to the partner's SFTP server.",
+            ""
+        ],
+        [
+            "**Passphrase**",
+            "If you selected **Public key** as the authentication type, provide the passphrase used to protect the private key.",
+            ""
+        ],
+        [
+            "**Polling**",
+            "",
+            ""
+        ],
+        [
+            "**Folder path**",
+            "The path to the folder that contains the files to be exchanged. For example: docs/por. webMethods.io B2B polls this folder to fetch the files. It polls only the specified folder and not any other folder or sub folders. <br>In case that a post processing action fails for a file, the file continues to exist in this location and will be picked up during the next polling interval.<br> webMethods.io B2B is designed for one-to-one mapping between SFTP-IN-CLIENT channel and SFTP server source folder. Therefore, while creating the SFTP-IN-CLIENT channel, you must create one SFTP-IN-CLIENT channel per SFTP server source folder. If you create multiple SFTP-IN-CLIENT channels for the same SFTP server source folder then there is a chance that the same file may be processed multiple times by webMethods.io B2B.<br>**Note:** If there are multiple files, then the order of fetching the files depends on the file system settings of the SFTP server. For example, webMethods.io B2B may fetch the files added first to the folder or in an alphabetical order based on the SFTP server settings.",
+            ""
+        ],
+        [
+            "**File name filter**",
+            "Filter criteria used to identify the specific files for polling. You can provide a comma separated list of filter criteria. For example, \\*.xml, \\*.txt, test\\_\\*b2b\\*123\\*.",
+            ""
+        ],
+        [
+            "**Type of document**",
+            "The channel's document type used to process files. Select from the following document types:<ul><li>**EDI** </li><li>**XML** </li><li>  **Other** </li></ul> **Note:** You can only create one channel per document type.",
+            ""
+        ],
+        [
+            "**Frequency**",
+            "Frequency at which webMethods.io B2B polls the partner's SFTP server for new files. Specify a numeric value. Default value is 5.",
+            ""
+        ],
+        [
+            "**Unit of frequency**",
+            "Unit of frequency specified in **Frequency**. Select from the following units: <ul><li>**Minutes** </li><li>**Hours** </li><li> **Days** </li></ul> Default value is 5. This makes the default polling frequency to be 5 minutes.",
+            ""
+        ],
+        [
+            "**Post processing**",
+            "",
+            ""
+        ],
+        [
+            "**Action**",
+            "Action to be taken by webMethods.io B2B on the files after processing them. Select one of the following actions: <ul><li>**Move to folder**</li><li>**Delete** </li></ul> Default is **Move to folder**.",
+            ""
+        ],
+        [
+            "**Folder path**",
+            "Path of the folder to which webMethods.io B2B places the files after processing. By default, webMethods.io B2B appends/processedto the folder path that you specified earlier in the Polling segment. For example, docs/por/processed. <br>**Important:** Ensure that the folder you specified has sufficient permissions for webMethods.io B2B to access and place the processed files. <br>In certain cases, the SFTP server might not support operations such as a file overwrite or rename. This might result in failure of the post processing action because of the inherent limitations of the underlying SFTP server. Refer to the SFTP server documentation to learn more about such limitations. <br>**Note:** If webMethods.io B2B fails to move the files to the folder that you specified in this field, then webMethods.io B2B places the files at the default location. In this example at docs/por/processed.",
+            ""
+        ],
+        [
+            "**Allow folder creation**",
+            "If the folder specified in the Folder path does not exist, enable this option to allow webMethods.io B2B to create a new folder with the same folder name. <br>webMethods.io B2B does not support creation of nested folders in SFTP server. For example, if `docs/por` is the existing folder path, then `docs/por/processed` is supported, whereas `docs/por/processed/partners` is not supported.<br> **Note:** If specified the folder is inaccessible or if you fail to enable the **Allow folder creation** option, then webMethods.io B2B places the files at the default location. In this example at docs/por/processed.",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "You can configure the settings required to identify the Flat File inbound documents you receive though SFTP-IN channel. The settings are listed as follows:",
+            "",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Field",
+            "Description",
+            ""
+        ],
+        [
+            "-----",
+            "-----------",
+            ""
+        ],
+        [
+            "**Key**",
+            "Specify a valid key to identify the Flat File document type. For example, a filename",
+            ""
+        ],
+        [
+            "**Value**",
+            "Specify the corresponding value for the **Key** that was defined. For example, sample.txt.",
+            ""
+        ],
+        [
+            "",
+            "",
+            ""
+        ],
+        [
+            "Field",
+            "Description",
+            ""
+        ],
+        [
+            ":---",
+            ":-----------",
+            ""
+        ],
+        [
+            "**Connection**",
+            "",
+            ""
+        ],
+        [
+            "**Hostname**",
+            "Host name or IP address of the partner's SFTP server. For example, `trader.com`.",
+            ""
+        ],
+        [
+            "**Port**",
+            "An active port on the partner's SFTP server. For example, 3456. Default is 22.<br>If the port to which the connection is being  established  is either invalid or not open, it results in a bad gateway error.",
+            ""
+        ],
+        [
+            "**Host public key option**",
+            "Public key used to establish a secure connection with partner's SFTP server. Select from the following options:<ul><li>**Auto retrieve** - webMethods.io B2B automatically retrieves the public key file. <br>**Note:** Ensure that the hostname and port are active and accessible.</li> <li> **Upload** - You can upload the public key file.</li></ul>",
+            ""
+        ],
+        [
+            "**Username**",
+            "Username used to connect to partner's SFTP server.",
+            ""
+        ],
+        [
+            "**Authentication type**",
+            "Type of authentication required to connect to partner's SFTP server. Select from the following types of authentications: <ul><li>**Password** </li><li> **Public key** </li></ul>",
+            ""
+        ],
+        [
+            "**Password**",
+            "If you selected **Password** as the authentication type, provide the password to connect to partner's SFTP server.",
+            ""
+        ],
+        [
+            "**Private key**",
+            "If you selected **Public key** as the authentication type, upload the private key file required to connect to the partner's SFTP server.",
+            ""
+        ],
+        [
+            "**Passphrase**",
+            "If you selected **Public key** as the authentication type, provide the passphrase used to protect the private key.",
+            ""
+        ],
+        [
+            "**Password**",
+            "If you selected **Password** as the authentication type, provide the password to connect to partner's SFTP server.",
+            ""
+        ],
+        [
+            "**Private key**",
+            "If you selected **Public key** as the authentication type, upload the private key file required to connect to the partner's SFTP server.",
+            ""
+        ],
+        [
+            "**Passphrase**",
+            "If you selected **Public key** as the authentication type, provide the passphrase used to protect the private key.",
+            ""
+        ],
+        [
+            "**Destination details**",
+            "",
+            ""
+        ],
+        [
+            "**Folder path**",
+            "The path of the folder into which webMethods.io B2B places the files.",
+            ""
+        ],
+        [
+            "**Allow folder creation**",
+            "If the folder specified in the Folder path does not exist, enable this option to allow webMethods.io B2B to create a new folder with the same folder name.<br> webMethods.io B2B does not support creation of nested folders in SFTP server. For example, if `docs/por` is the existing folder path, then `docs/por/processed` is supported, whereas `docs/por/processed/partners` is not supported.<br>",
+            ""
+        ],
+        [
+            "**File name prefix**",
+            "Prefix to add to the file name. Default value is <i>wmiob2b</i>. webMethods.io B2B constructs the file name by combining the prefix and timestamp. Thus, the file name format is: `prefix\\_<current\\_timestamp in YYYYMMDDhhmmssSSS format\\>`. For example, <i>wmiob2b\\_20200623062905325</i>.",
+            ""
+        ],
+        [
+            "**Document delivery rate**",
+            "",
+            ""
+        ],
+        [
+            "**Enable**",
+            "Allows you to limit the rate at which documents must be delivered to the endpoint. You must persist the document in the database so this option can be used to deliver documents in a regulated manner.",
+            ""
+        ],
+        [
+            "**Maximum number of requests per minute**",
+            "Specify the maximum number of business documents that can be delivered to the outbound channel endpoint. You can tune this rate based on the performance of the partner systems that receive the business documents on this endpoint. The default value is 1 \\(minimum\\). The maximum value is 1000.",
+            ""
+        ]
+    ]
+}
